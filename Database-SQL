@@ -1,0 +1,116 @@
+																									
+Explain how the Transaction work ?																									
+																									
+	Suppose in the method save, I need save 3 entity into 3 table																								
+		entity1.save																							
+		entity2.save																							
+		entity3.save																							
+																									
+	Now, when save entity 3, exception occur, then enity 1, entity 2 wil be rollback with entity 3																								
+																									
+	NOTE : 	Default rollback is rollback only for RuntimeException and Error . Not rollback if occur checkedException																							
+																									
+		So you can declare rollback for in annotation @Transacitonal 																							
+																									
+																									
+Index increase performance query?. So how to index 																									
+																									
+																									
+																									
+																									
+																									
+																									
+Hibernate ? Lazy loading vs Earger loading?																									
+																									
+		OneToMany : 	Default Fetch Type is LAZY																						
+																									
+		ManyToMany 	Default Fetch Type is Earger	 																					
+																									
+																									
+																									
+																									
+																									
+																									
+Hibernate vs JDBC?																									
+																									
+	Hibernate 	It is ORM (object relation mapping). That mean map the table from database																							
+																									
+		Need config dialect DB. So it translate HQL to DB we are using																							
+		So when the DB is change, only need change the dialect																							
+																									
+		Hiberate is automatic convert SQL Exception to Runtime Exception																							
+																									
+	JDBC	Simple is table query concept																							
+																									
+		Need write query explicity.																							
+		So when the DB is change, need change the DB query																							
+																									
+		Need handle SQL exception																							
+																									
+																									
+How to implement Hibernate in project																									
+																									
+		First, define dependency in pom.xml																							
+																									
+			"<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>   
+    <version>5.2.2.Final</version>
+</dependency>"																						
+																									
+		Secondly																							
+			Config Databse in application.properties																						
+																									
+																									
+Different between store procedure and function																									
+	"- Stored procedure có thể trả về giá trị zero, một hoặc nhiều giá trị. Trong khi function phải trả về một giá trị duy nhất (có thể là bảng).
+
+"																								
+	Store Procedure có thể call được Function .... Function ko thể gọi Store Procedure																								
+	- Các function chỉ có thể có các tham số đầu vào cho nó trong khi Stored procedure có thể có các tham số đầu vào hoặc đầu ra.																								
+So sánh union vs Union All																									
+		UNION				UNION ALL																			
+	Union được dùng để kết hợp 2 bộ kết quả từ 2 hoặc nhiều lệnh Select																								
+	Mỗi mệnh đề select trong toán tử UNIOn phải có cùng số cột																								
+	Kết quả trả về ko chứa phần tử trùng lặp					Kết quả trả về có chứa phần tử trùng lặp																			
+																									
+Trình tự cấu SQL :																									
+																									
+	SELECT . FROM . WHERE . GROUP BY. Having . ORDER By. LIMIT .. OFFSET 																								
+																									
+Index : 																									
+	Mặc định đánh index Id - cluster key																								
+	Nếu đánh thêm index column khác thì field đó là non-cluster key																								
+																									
+	Khi đó, khi query : 		SELECT * FROM Employee WHERE name = "ABC" thì sẽ dùng cả cluster key và non-cluster key để search																						
+																									
+			Column "name" khi đó được sắp xếp asc hoặc desc tùy thuộc vào cách đánh index 																						
+																									
+	3 Loại đánh index : 		B-Tree , Hash và R-Tree																						
+																									
+			B-Tree và Hash được dùng phồ biến nhất. Mặc định là B-Tree																						
+																									
+																																												
+																									
+																									
+	Ưu điểm :																								
+		Tăng tốc độ tìm kiếm records theo mệnh đề WHERE (Cả lệnh SELECT, UPDATE, DELETE mà có mệnh đề WHERE)																							
+																									
+																									
+																									
+	Nhược điểm																								
+		Tốc độ xử lí ghi dữ liệu ( INSERT, UPDATE) sẽ bị chậm đi. Lý do : Cần update lại thông tin index																							
+																									
+		Do vậy những table có xử lí insert, update thì ko nên đánh index																							
+																									
+																									
+																									
+	Lưu ý khi đánh index : 																								
+																									
+		Nên index những cột được dùng trong WHERE, JOIN, ORDER By																							
+																									
+		Không dùng index cho các bảng thường xuyên có  INSERT, UDPATE																							
+																									
+		Không dùng index cho các cột mà giá trị thường xuyên thay đổi																							
+																									
+								
