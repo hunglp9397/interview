@@ -1,0 +1,65 @@
+1	Why String is imutable ?																								
+		Memory optimization (Tối ưu bộ nhớ ) :																							
+			String has same value will point and store only one literal String in the String Pôl																						
+																									
+		Security : 																							
+			String is used to  store username or password or connection DB url																						
+			So String is immutable, value can not be changed. So hacker can not change the reference value and can not cause security  damage in th e application																						
+																									
+		Thread Safe	String is safe for multithreading . Difference thread can access a single String instance 																						
+			It will create new String for this thread, But original String value not change																						
+																									
+		Good  performance:																							
+			In class String, hashCode() method is override																						
+			String is immutable so hashCode() is cached, 																						
+			So in HashMap or HashTable when we put() or get() key-value,  the hashCode() is called and it cached so don't need recalculate hash value 																						
+			So it good for performance																						
+																									
+																									
+2	Difference between String vs String Builder																								
+																									
+		String is immutable 																							
+		String Builder is mutable																							
+																									
+		When concat String, String use operation plus, it will create new String Object in the StringPool																							
+		when concat String, StringBuilder use append() method																							
+																									
+		String overidde equals() method																							
+		StringBulider not override equals() method. So can not used equals() method. Need convert StringBuilder to String to compare equality of two String																							
+																									
+			StringBuilder str1 = new StringBuilder("A")																						
+			StringBuilder str2 = new StringBuilder("A")																						
+																									
+			System.out.print(str1.toString().equals(str2.toString());																						
+																									
+		StringBuilder is speedy and less memory than a String when concat 																							
+		Because String is immutable, when concat String will create new object																							
+																									
+		String is immutable so, the length is fixed																							
+		StringBuilder can use setLength() method 																							
+																									
+3	Difference between StringBuilder and StringBuffer																								
+																									
+		The Same : 	StringBuilder and StringBuffer is mutable																						
+																									
+		Difference	StringBuilder is not synchronized so  it not thread safe in multiple thread																						
+			In the StringBuffer class. all the method append() , length(), capacity() is synchronized method. So StringBuffer is synchronized so threaed safe in multiple thread																						
+																									
+			StringBuffer slower than StringBuidler in multiple thread because StringBuilder need lock() and realease lock()																						
+																									
+4. How to reverse String?
+
+public  String reverse(String input){
+
+StringBuilder output = new StringBuilder();
+char [] charactors = input.toCharArray();
+for(int i = charactors.size; i> 0; i--){
+  output.append(charactors.get(i));
+}
+
+return output;
+
+
+}
+																									
+																									
