@@ -1,0 +1,101 @@
+0	New feature in java 8																								
+		Functional Interface																							
+		Lamda Expression																							
+		Stream																							
+		Datetime API																							
+		Method reference																							
+		Optional 																							
+																									
+																									
+	Optional ? Why use Optional																								
+																									
+		Optional is a container type which can contain value or null value																							
+																									
+		Optinal encapsulation null or not null value,readable help avoid null check so avoid NullPointerException in runtime																							
+																									
+																									
+	Difference between Map and flatMap																								
+																									
+		Both map and flat Map can apply to Stream and both return a Stream																							
+																									
+				Map 				flatMap																	
+																									
+			The function passed to map() operation returns				The funciton pass to flatMap() operation return multiple value for output																		
+			a single value for single input																						
+																									
+			One to one Mapping				one to many mapping 																		
+																									
+			Used only for transformation				flatMap() is used both for transformation and mapping																		
+																									
+	Lamda expression ?																								
+																									
+		Lamda expression is a anonymous function, which not have			name	name 																			
+																									
+						return type																			
+																									
+						access modifier																			
+																									
+																									
+																									
+	Functional interface ?																								
+																									
+		Functional interface is the interface which have only one abstract method																							
+																									
+		Example	Comparable, Runable																						
+																									
+																									
+																									
+																									
+																									
+																									
+	Default method in interface																								
+																									
+		Contain body																							
+		Invoked by using the name of Interface																							
+		The class implement this interface not require to implement default method																							
+		We can add new feature on interface that not effect the class implement																							
+																									
+	Static method in Interface:																								
+																									
+																									
+		Contain body																							
+		is invoked by using the name of Interface																							
+		Defind the utility method																							
+		CAN NOT  OVERRIDE																							
+																									
+	Method Reference 																								
+		Method reference are special type of lamda expression																							
+																									
+		Used to create lamda expression by refer exist method 				Static  method																			
+						Instance method of particular object																			
+						Constructor																			
+																									
+																									
+	Different between Intermediate and Terminal Operations in Java 8 Stream																								
+																									
+		Firstly, Intermediate operations : filter(), map(), ... 																							
+		Termial operation  : findFirst(), findAny(), collect()																							
+																									
+		The main diference is : 		Can reuse the stream after an intermediate operator But terminal operator can not																					
+																									
+		Example : 	Can call map() or flatMap() after call filter()																						
+																									
+			Can not call another operator after forEach()																						
+																									
+																									
+	Different between Collection and Stream																								
+																									
+		Collection is the datastructure																							
+																									
+																									
+																									
+																									
+		Stream is not the data structure																							
+		Stream is immutable Object,No change the data																							
+		Stream can not get element by index 																							
+																									
+																									
+																									
+	Why Functional Interface have only one abstract method ?																								
+																									
+	
