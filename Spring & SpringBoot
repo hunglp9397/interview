@@ -1,0 +1,187 @@
+1	Dependency injection in Spring											
+												
+		Suppose we have the class Vehicle, In the class Client, in the class Client we have object class ProductService										
+		In the class Client we need use the method of the productService. So exmaple I create the insance of ProductService in the constructor of the Class Client										
+		So The Client depend on the ProductService										
+		So Suppose we need change the ProductService into the PayloadService, Need change this in the constructor										
+		It is the problem										
+		So Spring came to solve this problem										
+		We only need declare the Bean in the spring.xml or using annotaion @Autowired to inject the bean. So 										
+		So DI concept in Spring is, Spring will find the implement of d										
+												
+	Advantage : 											
+		A basic benefit of dependency injection is decrease coupling between class and dependency										
+		So program become more reusable, testable, maintainable										
+2	IOC là gì											
+												
+												
+												
+3	What is Auto-wiring ?											
+		We declare annotaion @Service on the class serviceLayer										
+		Declare annotation @Autowired in the controller class Spring find the implement of the Interface and inject 										
+4	How to inject bean											
+		Constructor-injection										
+		Property Injection										
+		Method Injection										
+5	Scope in spring 											
+												
+		Singleton 	When define a bean with singleton scope, The container create a single instance of that bean									
+			All request for that bean will return the same object, which is cached									
+			All modification to the object will be reflect to the bean									
+			The scope is the default value if no other scope is specified									
+												
+												
+		Prototype	A bean with the prototye scope will return a different instance everty time it request from the container									
+												
+												
+		Request										
+												
+		Session										
+												
+												
+6	What is Singleton Pattern, How to implement Singleton ?											
+												
+		Concept : 										
+												
+			Singleton is a pattern of creational design pattern, that the class has only one instance and provide a global access point to thí instance									
+												
+		Implement 										
+			Create private constructor to prevent access from ouside 									
+												
+			Use 'private static final' variable to ensure var only init in class									
+												
+			Have method 'public static ' to return instance									
+												
+												
+												
+7	Explain Spring LifeCircle											
+												
+		@PostContstruct : 										
+			Spring call the method which annotation @PostConstruct only one, after the init the bean									
+												
+												
+												
+												
+		@PreDestroy :										
+			Spring call the method which annotaion @PreDestroy only one, Before remove the bean from aplication context									
+												
+												
+												
+8	Different between @GetForEntity vs @GetForObject											
+												
+												
+		GetForObject is basicly is a method in rest template, will only return the object 										
+												
+		GetForEntity is basicly is a method in rest template, return the object, the body , the statusCode, the header										
+												
+		Ngoài ra, ta dùng method exchange 										
+												
+												
+9	In RestAPI , You return the ResponseEntity, So what is advantage of ResponseEntity ?											
+												
+		Advantage of ResponseEntity is can return the 			HTTP Status example OK, Bad Request							
+					The body							
+					The headers							
+												
+												
+												
+10	How to validators in Spring											
+		We create the CustomValidator and then Implement Validator Class										
+												
+		So override 2 method : supports() , validate()										
+												
+			In the method validate(), you validate logic business and set Error 									
+												
+11	How to configure logging in SpringBoot Application											
+												
+		Because Spring Boot support Logging, Log4J2, So we have 2 options : 										
+												
+				Option 1 : 	Config  Logging level in application.properties			Example : 	logging.level.spring.framework = Debug			
+												
+				Option 2 	Cra							
+												
+12	What are the step to deploy SpringBoot as  JAR or WAR files											
+												
+			Firstly, add plugin int the pom.xml			spring-boot-maven-plugin						
+												
+			Then, Set the packaging in the pom.xml to jar or war									
+												
+												
+												
+												
+13	What is the step to connect an external database like MYSQL or Orcale											
+												
+		Firstly 	Add dependency MYSQL CONNECTOR to pom.xml									
+		Secondly	Config information of DB such as : URL, username, password, dialect    in the application.properties									
+												
+												
+14	Anotation @RestController 											
+												
+		Basicly, @RestController is combination of @Controller  and @ResponseBody, Use to create restfull controller										
+												
+		It convert the response result to JSON or XML										
+												
+												
+15	What is the default application server when click 'Run as Application'											
+												
+		Because default server application is Tomcat, So it will init tomcat server										
+												
+16	Why do we need Spring Profiles											
+												
+		When develop, we work with multiple environment such as : DEV, Product										
+												
+		So we need Spring Profile, such as : application-dev.properties, application-prod.properties ...										
+												
+17	Can override or replace the Tomcat server in SpringBoot											
+												
+		Yes, use 'spring-boot-starter-jetty' as a dependency injection for each project 										
+												
+18	Can disable the default web server in the SpringBoot Applicaiton :											
+												
+		Yes, can edit on file application.properties : 			spring.main.web-application.type = none							
+												
+19	What does the annotaion @SpringBootApplication do internally											
+												
+		@SpringBootApplication is the annotaion include 			@Configuration							
+					@EnableAutoConfiguration							
+					@ComponentScan							
+												
+20	Difference between @RestController and @Controller											
+												
+		@RestController include @Controller and @ResponseBody, basicly return the object into JSON or XML										
+												
+		@Controller basicly map the model object to View or Template, so readable										
+												
+21	Java Bean VS Spring Bean											
+												
+												
+												
+												
+22	Khi sử dụng @Autowired, instance được tạo ra trong bộ nhớ nào ?											
+												
+		Spring IOC container										
+												
+23	Difference between @Bean and @Autowired											
+												
+												
+												
+24	Spring AOP											
+		1 kĩ thuật lập trình dùng để tách logic chương trình thành các phần riêng biệt										
+												
+		Trong Spring AOP có 4 loại advice được hỗ trợ : 										
+												
+			Before Advice : 		Chạy trước khi method được thực thi							
+												
+			After returning advice : 		Chạy sau khi method trả về một kết quả							
+												
+			After throwing advice :		Chạy khi method ném ra một exception							
+												
+			Around advice:		Chạy khi method được thực thi (Bao gồm 4 loại advice)							
+												
+												
+25	@Component vs @Bean											
+												
+												
+												
+26	JPA VS Hibernate vs Mybatis											
+												
