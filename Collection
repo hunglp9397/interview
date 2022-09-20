@@ -1,0 +1,109 @@
+1	Difference between ArayList and LinkedList																								
+																									
+				ArrayList				LinkedList																	
+																									
+		Same		Each element added by order																					
+				Can add null element																					
+																									
+		Diference																							
+																									
+			About data structre	Array				LinkedList																	
+																									
+																									
+			About complexy	O(1) if not need improve size				O(1)																	
+				O(n) if need improve size																					
+																									
+				Slow because need sort after delete or add (O(n))				Fast because only need update reference tail 																	
+			About add /delete					O(1)																	
+																									
+																									
+			About operation get()	Fast because just get element by index				Slow because need iterating each element start to end																	
+																									
+																									
+																									
+			About memory	ArrayList use less memory than LinkedList																					
+																									
+2	Difference between List and Set																								
+																									
+			List				Set																		
+																									
+		The List is ordered sequence				The Set is unorderd sequence																			
+																									
+		List allow duplicate elements				Set doesn't allow duplicate elements																			
+																									
+		Can access position element				Can not access position element																			
+																									
+		Can store mulitple null element				Can store only one null element																			
+																									
+																									
+																									
+3	How HashMap internal working																								
+																									
+		When create HashMap																							
+			HashMap myMaps = new HashMap<String, Integer > ()																						
+																									
+		Its create 16 bucket, each bucket is a linked list			1	9																			
+					2	10																			
+					3	11																			
+					4	12																			
+					5	13																			
+					6	14																			
+					7	15																			
+					8	16																			
+																									
+																									
+		When put value to HashMap 		myMaps.put("a", 1)																					
+																									
+		It create 1 linkedlist, have 4 part : 		key :  a																					
+				value : 1																					
+				hash: 0x12345																					
+				next : null																					
+																									
+																									
+			hash = hashCode(key) = hashCode("a") = 0x2123																						
+																									
+			index = hash & (n -1 ) = 4 																						
+																									
+5	How HashSet internal working ?																								
+																									
+		When we create HashSet, It internally create HashMap, 																							
+		If we insert element into HsshSet, It will also put the key is element and the value is the final Object PRESENT																							
+		So HashSet only store distinct value 																							
+																									
+																									
+																									
+																									
+																									
+6	Different between HashMap and HashTable																								
+																									
+																									
+			HashMap			HashTable																			
+																									
+		No synchronized			Synchronnized																				
+		No thread safe			Thread safle																				
+		Allow 1 null Key			Not allow null key or null value																				
+		Multiple Null value																							
+																									
+																									
+7	Different between List and ArrayList																								
+																									
+			List			ArrayLIst																			
+																									
+		Is Fixed Size			Dynamic size, increase size if required																				
+																									
+		Only Store Primitive Value			Store Primitive And Object type																				
+																									
+		Array Is faster than ArrayList because ArrayList is dynamic																							
+																									
+8	HashMap vs LinkedHashMap																								
+																									
+		Major diferrent : 	Linked HashMap store and trace element by order																						
+																									
+																									
+			HashMap		Linked HashMap																				
+																									
+			Low memory		More memory																				
+																									
+			DS liên kết đơn		DS liên kết đôi																				
+																									
+											
