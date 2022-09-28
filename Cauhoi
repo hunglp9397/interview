@@ -9,3 +9,5 @@
 -so sánh mysql với postgree
 -khi muốn mở rộng thêm một service nữa trong mô hình microservice cần làm gì. api gateway có tác dụng gì
 -thằng nào đi sau filter của springmvc
+- Đã bao h viết một lớp request Intercepter chưa, lấy ví dụ trong project hiện tại
+- AOP là gì, lấy ví dụ AOP đang  dùng trong project
