@@ -22,3 +22,4 @@
 - Khác nhau giữa patch và put (post vs put)
 - kiến trúc của một microservice
 - Git merge vs git rebase?
+- Khác nhau giữa run() vs start()
