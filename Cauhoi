@@ -4,11 +4,20 @@
 - Trong encapsulation, tại sao lại phải khai báo field private, dùng setter getter, sao ko khai báo field public luôn đi
 - Jwt dùng thuật toán để encode, giả sử biết được thuật toán thì decode được body ra à?
 - cách triển khai 1 junit mockito
--  từ khóa final
--khi nào dùng abstract class, khi nào dùng interface
--so sánh mysql với postgree
--khi muốn mở rộng thêm một service nữa trong mô hình microservice cần làm gì. api gateway có tác dụng gì
--thằng nào đi sau filter của springmvc
+- từ khóa final
+- khi nào dùng abstract class, khi nào dùng interface
+- so sánh mysql với postgree
+- khi muốn mở rộng thêm một service nữa trong mô hình microservice cần làm gì. api gateway có tác dụng gì
+- thằng nào đi sau filter của springmvc
 - Đã bao h viết một lớp request Intercepter chưa, lấy ví dụ trong project hiện tại
 - AOP là gì, lấy ví dụ AOP đang  dùng trong project
 - Partition trong index ?
+- Trong màn forgotpassword, khi mà forgot password xong thì mình muốn tất cả các tab khác mà đang xử lí bị bắn ra ngoài màn login thì handle token như thế nào? (vì mỗi tab login sẽ gen một jwt riêng)
+- self-signed trong jwt ?
+- có mấy loại index ? đánh nhiều cluster index có được ko, có thể đánh các cột (ko phải là primary key) là cluster index được ko
+- SQL tunning? giả sử khi mà đánh index một field, mà câu điều kiện lại là like "%abc%" thì nó thực hiện search theo index ko ? để tối ưu thì dùng câu query ntn? (TL : like "abc%")
+- giả sử mà có nhiều cột cần đánh index, thì có thể đánh tối đa bn cột 
+- trình tự tìm khi đánh index 
+- vì sao là String là immutable?
+- Khác nhau giữa patch và put (post vs put)
+- kiến trúc của một microservice
