@@ -1,0 +1,11 @@
+- Java luôn là truyền tham trị, khi truyền một object vào một hàm, gán giá trị nó = null thì giá trị nó có thay đổi ko ? ( Đây có phải là truyền tham chiếu ko)
+- Việc đánh index cả 2 field cùng một lúc với TH đánh 1 field trước 1 field sau, có khác gì nhau ?
+- Khi mà dùng annotation validate field của javax thì làm thế nào để bắt được exception
+- Trong encapsulation, tại sao lại phải khai báo field private, dùng setter getter, sao ko khai báo field public luôn đi
+- Jwt dùng thuật toán để encode, giả sử biết được thuật toán thì decode được body ra à?
+- cách triển khai 1 junit mockito
+-  từ khóa final
+-khi nào dùng abstract class, khi nào dùng interface
+-so sánh mysql với postgree
+-khi muốn mở rộng thêm một service nữa trong mô hình microservice cần làm gì. api gateway có tác dụng gì
+-thằng nào đi sau filter của springmvc
